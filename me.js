@@ -58,7 +58,7 @@ app.get("/me", async (req, res) => {
                         stack: process.env.USER_STACK,
 			},
 			timestamp: new Date().toISOString(),
-			fact: data
+			fact: data.fact
 		}
 
 
