@@ -14,7 +14,7 @@ app.use(cors());
 const limiter = rateLimit({
 	windowMs: 60 * 1000,
 	max: 10,
-	message: { error: "Too many request, please try again later." }
+	message: { error: "Too many requests, please try again later." }
 });
 app.use(limiter);
 
@@ -58,7 +58,7 @@ app.get("/me", async (req, res) => {
                         stack: process.env.USER_STACK,
 			},
 			timestamp: new Date().toISOString(),
-			fact: data.fact
+			fact: data.fact.fact
 		}
 
 
