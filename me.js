@@ -53,9 +53,9 @@ app.get("/me", async (req, res) => {
                 const info = {
 			status: "success",
 			user: {
-                        email: "ajiroba980@gmail.com",
-			name: "Mustapha Ajiroba"
-                        stack: "Node.js/Express",
+                        email: process.env.USER_EMAIL,
+			name: process.env.USER_NAME,
+                        stack: process.env.USER_STACK,
 			},
 			timestamp: new Date().toISOString(),
 			fact: data.fact
